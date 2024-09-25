@@ -1,0 +1,14 @@
+{% extends 'base.html' %} {% block content %}
+<!--Any other HTML goes here inbetween block and endblock-->
+<div class="container wrapper">
+    <div class="row mb-5">
+        <div class="col-md-12 p-5 text-center bg-dark">
+        <h1>Dashboard 1 Title</h1>
+        <p>Extra Information</p>
+        </div>
+    </div>
+  </div>
+
+{% endblock %} {% block script %}
+<script type="text/javascript" src="{{ url_for('static', filename='js/dashboard_1.js') }}"></script>
+{% endblock %}
