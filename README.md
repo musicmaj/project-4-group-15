@@ -18,7 +18,7 @@ Project 4 is the final project for the Data Analytics and Visualization Bootcamp
   - **Minimum Stay Requirements**: Understanding rental policies and their implications for travelers.
   - **Availability**: Assessing seasonal trends in rental availability throughout the year.
   - **Host Listings and Reviews**: Evaluating host performance and customer satisfaction.
-  - **Machine Learning**: Exploration of regrgession models (linear vs tree) in addtion the application of Mean Squared Error (MSE), Mean Absolute Error (MAE), Root Mean Squared Error (RMSE), and R^2 score comparison for Test Data. 
+  - **Machine Learning**: Exploration of regression models (linear vs tree) in addtion the application of Mean Squared Error (MSE), Mean Absolute Error (MAE), Root Mean Squared Error (RMSE), and R^2 score comparison for Test Data. 
 
 ## Dataset
 The dataset requires minimal cleaning, making it straightforward to work with. Additionally, a comparison dataset can easily be integrated for predictive analysis over time if desired. 
