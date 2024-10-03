@@ -1,5 +1,5 @@
 # Project-4-group-15
-# Project Title: Airbnb Listings Analysis
+# New York City Airbnb Analysis
 
 ## Overview
 Project 4 is the final project for the Data Analytics and Visualization Bootcamp. Our group has chosen to focus on Airbnb listings using the **Airbnb Open Dataset** based in **New York, USA**. This project aims to provide travel insights for consumers and business insights for entrepreneurs who may want to get involved with Airbnb or other similar companies.
@@ -11,9 +11,10 @@ https://github.com/musicmaj/project-4-group-15
 https://project4group15.pythonanywhere.com/
 
 ## Group Members
-- **Lina Blanco Restrepo**
-- **Gunel Garayeva**
+
 - **Fatina Hamadi**
+- **Gunel Garayeva**
+- **Lina Blanco Restrepo**
 - **Kade Rivers**
 
 ## Objectives
