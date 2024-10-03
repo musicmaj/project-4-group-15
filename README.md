@@ -4,6 +4,12 @@
 ## Overview
 Project 4 is the final project for the Data Analytics and Visualization Bootcamp. Our group has chosen to focus on Airbnb listings using the **Airbnb Open Dataset** based in **New York, USA**. This project aims to provide travel insights for consumers and business insights for entrepreneurs who may want to get involved with Airbnb or other similar companies.
 
+## GitHub Repository
+https://github.com/musicmaj/project-4-group-15
+
+## Python Anywhere Link
+https://project4group15.pythonanywhere.com/
+
 ## Group Members
 - **Lina Blanco Restrepo**
 - **Gunel Garayeva**
@@ -21,7 +27,8 @@ Project 4 is the final project for the Data Analytics and Visualization Bootcamp
   - **Machine Learning**: Exploration of regression models (linear vs tree) in addtion the application of Mean Squared Error (MSE), Mean Absolute Error (MAE), Root Mean Squared Error (RMSE), and R^2 score comparison for Test Data. 
 
 ## Dataset
-The dataset requires minimal cleaning, making it straightforward to work with. Additionally, a comparison dataset can easily be integrated for predictive analysis over time if desired. 
+The original dataset required minimal cleaning, making it straightforward to work with. 
+Additional open-source data sets were added for comparison with ease of adding on future datasets for further analysis over time.
 
 ## Conclusion
 This project not only enhances our understanding of Airbnb listings but also equips us with valuable skills in data analytics and visualization that can be applied in real-world business scenarios.

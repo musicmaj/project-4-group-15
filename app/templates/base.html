@@ -5,55 +5,48 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Meteorite Landings</title>
+  <title>Airbnb Data</title>
 
   <!-- CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  
+
   <!-- Our Bootswatch Choice -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/minty/bootstrap.min.css" integrity="sha384-H4X+4tKc7b8s4GoMrylmy2ssQYpDHoqzPa9aKXbDwPoPUA3Ra8PA5dGzijN+ePnH" crossorigin="anonymous">
-  <!-- Imports -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/solar/bootstrap.min.css" integrity="sha384-NCwXci5f5ZqlDw+m7FwZSAwboa0svoPPylIW3Nf+GBDsyVum+yArYnaFLE9UDzLd" crossorigin="anonymous">  <!-- Imports -->
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <script src="https://d3js.org/d3.v7.min.js"></script>
-  
-  <!-- Marker cluster JavaScript code -->
-  <script type="text/javascript" src="https://unpkg.com/leaflet.markercluster@1.0.3/dist/leaflet.markercluster.js"></script>
-  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Custom JavaScript code -->
+  <script type="text/javascript" src="{{ url_for('static', filename=filename) }}" defer></script>
+
+
+
   <!-- fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
-  
+
   <!-- local stylesheet -->
   <link rel="stylesheet" href="{{ url_for('static', filename='css/static.css') }}">
 </head>
 <body>
   <div id="chart"></div>
-  <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top" data-bs-theme="dark">
+  <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="/">Airbnb Dataset Navigation</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-brand" href="/">Airbnb Project</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor1" aria-controls="navbarColor1" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('dashboard_1') }}">Dashboard 1</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('dashboard_2') }}">Dashboard 2</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('machine_learning') }}">Machine Learning</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('workscited') }}">Works Cited</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('aboutus') }}">About Us</a>
-          </li>
+      <div class="collapse navbar-collapse" id="navbarColor1">
+        <ul class="navbar-nav me-auto">
+            {% for navlink in routes %}
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for(navlink[0]) }}">{{ navlink[1] }}</a>
+            </li>
+            {% endfor %}
         </ul>
       </div>
     </div>
@@ -66,7 +59,7 @@
   <!-- Our JavaScript -->
 
   <!--<script type="text/javascript" src="static/js/{{chart_js}}"></script>-->
-  
+
   {% block script %} {% endblock %}
 </body>
 

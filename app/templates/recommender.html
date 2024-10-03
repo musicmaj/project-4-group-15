@@ -1,0 +1,48 @@
+{% extends 'base.html' %} {% block content %}
+<!--Any other HTML goes here inbetween block and endblock-->
+<div class="container wrapper">
+    <div class="row mb-5">
+        <div class="col-md-12 p-5 text-center bg-dark">
+            <h1>Recommender</h1>
+            <div class="container">
+                <form id="recommender-form">
+                    <div class="form-group row">
+                        <label for="closest_rentals_length" class="col-sm-4 text-right">Closest Rentals Length:</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="closest_rentals_length" name="closest_rentals_length">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="neighbourhood_group" class="col-sm-4 text-right">Borough:</label>
+                        <div class="col-sm-6">
+                            <select class="form-control" id="neighborhood_group">
+                                <option>Bronx</option>
+                                <option>Brooklyn</option>
+                                <option>Manhattan</option>
+                                <option>Queens</option>
+                                <option>Staten Island</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="room_type" class="col-sm-4 text-right">Room Type:</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="room_type" name="room_type">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="price" class="col-sm-4 text-right">Price:</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="price" name="price">
+                        </div>
+                    </div>
+                    <button id="recommender-submit" class="btn btn-primary">Submit</button>
+                </form>
+            </diov>
+        </div>
+    </div>
+</div>
+
+{% endblock %} {% block script %}
+<script type="text/javascript" src="{{ url_for('static', filename='js/recommender.js') }}"></script>
+{% endblock %}

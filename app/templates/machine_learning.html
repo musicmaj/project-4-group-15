@@ -3,12 +3,79 @@
 <div class="container wrapper">
     <div class="row mb-5">
         <div class="col-md-12 p-5 text-center bg-dark">
-        <h1>Machine Learning Title</h1>
-        <p>Extra Information</p>
+            <h1>Machine Learning Price Predictor</h1>
+
+            <div class="container">
+                <form id="predict-form">
+                    <div class="form-group row">
+                        <div class="text-left form-check col-sm-6 offset-sm-4">
+                            <input type="checkbox" class="form-check-input" id="host_identity_verified">
+                            <label for="host_identity_verified">Host Identity Verified</label>
+                        </div>
+                        <div class="text-left form-check col-sm-6 offset-sm-4">
+                            <input type="checkbox" class="form-check-input" id="instant_bookable">
+                            <label for="instant_bookable">Instantly Bookable?</label>
+                        </div>
+                    </div>
+
+                <div class="form-group row">
+                    <label for="service_fee" class="col-sm-4 text-right">Service Fee</label>
+                    <div class="col-sm-6"><input type="text" class="form-control" id="service_fee"></div>
+                </div>
+                <div class="form-group row">
+                    <label for="minimum_nights" class="col-sm-4 text-right">Minimum Nights</label>
+                    <div class="col-sm-6"><input type="text" class="form-control" id="minimum_nights"></div>
+                </div>
+                <div class="form-group row">
+                    <label for="review_rate_number" class="col-sm-4 text-right">Review Rating???</label>
+                    <div class="col-sm-6"><input type="text" class="form-control" id="review_rate_number"></div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="borough_selector" class="col-sm-4 text-right">Borough</label>
+                    <div class="col-sm-6">
+                        <select id="borough_selector" class="form-control">
+                            <option value="bronx">Bronx</option>
+                            <option value="brooklyn">Brooklyn</option>
+                            <option value="manhattan">Manhattan</option>
+                            <option value="queens">Queens</option>
+                            <option value="staten">Staten Island</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="cancellation_policy" class="col-sm-4 text-right">Cancellation Policy</label>
+                    <div class="col-sm-6">
+                        <select name="cancellation_policy" id="cancellation_policy" class="form-control">
+                            <option value="flexible">Flexible</option>
+                            <option value="moderate">Moderate</option>
+                            <option value="strict">Strict</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="room_type" class="col-sm-4 text-right">Room Type</label>
+                    <div class="col-sm-6">
+                        <select name="room_type" id="room_type" class="form-control">
+                            <option value="entire">Entire House</option>
+                            <option value="hotelr">Hotel Room</option>
+                            <option value="privater">Private Room</option>
+                            <option value="sharedr">Shared Room</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button id="predict-submit" class="btn btn-primary">Submit</button>
+                </form>
+
+                <h1 id="price-prediction"></h1>
+            </div>
         </div>
     </div>
-  </div>
+</div>
 
-{% endblock %} {% block script %}
-<script type="text/javascript" src="{{ url_for('static', filename='js/machine_learning.js') }}"></script>
 {% endblock %}
+
+{% block script %}{% endblock %}
